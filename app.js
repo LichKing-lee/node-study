@@ -14,4 +14,12 @@ app.get("/", (req, res) => {
     });
 });
 
+app.get("/query", (req, res) => {
+    res.send(req.query.name);
+});
+
+app.get("/path/:variable", (req, res) => {
+    res.send(req.params.variable);
+});
+
 app.listen(3000, () => console.log("Hello NodeJS"));
